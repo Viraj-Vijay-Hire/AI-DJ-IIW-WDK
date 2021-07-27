@@ -42,6 +42,14 @@ function gotPoses(results)
 function draw()
 {
     image(video, 0, 0, 600, 500);
+    fill("#c0fff4");
+    stroke("#c0fff4");
+    circle(leftWrist_X, leftWrist_Y, 20);
+    InNumberleftWrist_Y = Number(leftWrist_Y);
+    remove_decimals = floor(InNumberleftWrist_Y);
+    volume = remove_decimals/500;
+    document.getElementById("volume").innerHTML = "volume = " + volume;
+    song.setVolume(volume);
 }
 
 function play()
